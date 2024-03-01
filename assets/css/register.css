@@ -1,0 +1,177 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Mono&family=Ysabeau+Infant:wght@300&display=swap');
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+#login-form {
+    display: flex;
+    height: 100vh;
+}
+
+.left {
+    flex: 1;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.right {
+    flex: 1;
+    padding: 100px;
+    box-sizing: border-box;
+    margin: auto;
+    max-width: 700px;
+    min-height: 100vh;
+    margin-top: 0;
+    background-color: #C42E1D;
+}
+
+.heading {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 0;
+    color: #fff;
+}
+
+.connect {
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.input-group {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 1px;
+}
+
+.input-group div {
+    flex: 1;
+}
+
+select {
+    width: 100%;
+    padding: 19px; /* Match the padding with the input elements */
+    box-sizing: border-box;
+    margin-bottom: 2px;
+    border-radius: 10px;
+	border: 2px solid black;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+	font-weight: bold;
+	font-size: 14px;
+    color: white;
+}
+
+textarea {
+    width: calc(100% - 4px);
+    padding: 15px;
+    box-sizing: border-box;
+    margin-bottom: 2px;
+    border-radius: 10px;
+	border: 2px solid black;
+}
+
+input {
+    width: calc(100% - 4px); /* Adjusted width calculation for padding */
+    padding: 15px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+	border-radius: 10px;
+}
+
+.input-group div .password-input-container {
+    position: relative;
+}
+
+.input-group div .toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 40%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Align the icon vertically in the middle */
+	margin: auto;
+}
+
+.input-group div i {
+    display: inline-block;
+	margin: auto;
+}
+
+.submit {
+    width: 50%;
+	height: 100%;
+    margin: auto;
+    text-align: center; /* Center the button horizontally */
+}
+
+button {
+    background-color: #fff;
+    color: #C42E1D;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    padding: 15px; /* Adjust the padding to make the button bigger */
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 16px; /* Adjust the font size to make the text bigger */
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #d1d1d1;
+}
+
+.login {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login p {
+    font-size: 14px;
+    color: #fff;
+}
+
+.login a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login a:hover {
+    color: #010101;
+}
+
+
+
+/* Media query for screens smaller than 640px */
+@media (max-width: 640px) {
+    .left {
+        display: none; /* Hide the left column on small screens */
+    }
+
+    .right {
+        flex: 1; /* Make the right column take the full width */
+		padding: 20px;
+		box-sizing: border-box;
+		margin: auto;
+    }
+}

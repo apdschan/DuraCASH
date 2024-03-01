@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Mono&family=Ysabeau+Infant:wght@300&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #fff;
+    display: flex;
+    overflow: hidden;
+    border-bottom: solid 2px #C42E1D;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    max-height: 50px;
+}
+
+.navbar a {
+    flex-grow: 1;
+    text-align: center;
+    padding: 8px 6px;
+    text-decoration: none;
+    color: #C42E1D;
+    font-weight: 1000;
+    font-size: larger;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 50px;
+    height: auto;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.logo a {
+    margin: 0;
+}
+
+/* Account Section */
+.account-section {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 16px;
+}
+
+.account-section img {
+    width: 30px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.logout-button {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 80px; /* Same width as the sidebar */
+    background-color: #C42E1D;
+    text-align: center;
+    padding: 0px 0;
+    border-top: solid 2px #fff;
+}
+
+.logout-button a {
+    color: #fff;
+    text-decoration: none;
+    font-size: small;
+    font-weight: 700;
+}
+
+
+/* Sidebar */
+.sidenav {
+    height: 100%;
+    width: 80px;
+    position: fixed;
+    z-index: 1;
+    top: 50px;
+    left: 0;
+    border-right: solid 2px #C42E1D;
+}
+
+.sidenav a:focus {
+    color: #fff;
+    background-color: #C42E1D;
+    outline: none; 
+}
+
+.sidenav a {
+    padding: 5px 0;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 700;
+    font-size: small;
+}
+
+.sidenav a i {
+    margin-bottom: 5px;
+    font-size: 24px;
+    font-weight: 1000;
+}
+
+.sidenav a:hover {
+    color: #C42E1D;
+    background-color: #f1f1f1;
+}
+
+/* Page Content */
+.container {
+    margin-left: 80px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    border-collapse: collapse;
+    border-radius: 10px;
+}
+
+.table thead {
+    background-color: #C42E1D; /* Replace with the color you want */
+    color: #fff; /* Replace with the color you want for the text in the thead */
+}
+
+.table th, .table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border: 1px solid #dee2e6;
+}
+
+/* Style the View button */
+.btn-view {
+    padding: 8px 12px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #28a745; /* Green color */
+    color: #000; /* White text color */
+}
+
+/* Style the Edit button */
+.btn-edit {
+    padding: 8px 12px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #fbff00; /* Blue color */
+    color: #000; /* White text color */
+}
+
+/* Style the Delete button */
+.btn-delete {
+    padding: 8px 12px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #dc3545; /* Red color */
+    color: #000; /* White text color */
+}
+
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}

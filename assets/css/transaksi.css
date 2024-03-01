@@ -1,0 +1,553 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+#pagination {
+    text-align: center;
+    margin-top: 10px; /* Adjust as needed */
+}
+
+#pagination button {
+    background-color: #e74c3c; /* Red background color */
+    color: #ffffff; /* White text color */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#currentPage {
+    margin: 0 10px;
+}
+
+.searchbox{
+    text-align: end;
+    margin-bottom: 2%;
+}
+
+#searchInput{
+    width: 30%;
+}
+
+.navbar {
+    background-color: #C42E1D;
+    display: flex;
+    overflow: hidden;
+    border-bottom: solid 2px #C42E1D;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    max-height: 50px;
+}
+
+.navbar a {
+    flex-grow: 1;
+    text-align: center;
+    padding: 8px 6px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 1000;
+    font-size: larger;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 45px;
+    height: auto;
+    margin-left: 20px;
+    margin-bottom: 2px;
+    margin-right: 6px;
+}
+
+.logo a {
+    margin: 0;
+}
+
+.account-section {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 16px;
+}
+
+.account-section img {
+    width: 30px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.logout-button {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 84px;
+    background-color: #C42E1D;
+    text-align: center;
+    padding: 0px 0;
+    border-top: solid 2px #fff;
+}
+
+.logout-button a {
+    color: #fff;
+    text-decoration: none;
+    font-size: small;
+    font-weight: 700;
+}
+
+.sidenav {
+    height: 100%;
+    width: 84px;
+    position: fixed;
+    z-index: 1;
+    top: 50px;
+    left: 0;
+    border-right: solid 2px #C42E1D;
+}
+
+.sidenav a:focus {
+    color: #fff;
+    background-color: #C42E1D;
+    outline: none; 
+}
+
+.sidenav a {
+    padding: 5px 0;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 700;
+    font-size: small;
+}
+
+.sidenav a i {
+    margin-bottom: 5px;
+    font-size: 24px;
+    font-weight: 1000;
+}
+
+.sidenav a:hover {
+    color: #C42E1D;
+    background-color: #f1f1f1;
+}
+
+
+.container {
+    margin: 10px 10px 10px 90px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Drop shadow */
+    border-radius: 10px;
+}
+
+h2 {
+    background-color: #C42E1D; /* Header background color */
+    padding: 10px;
+    color: white; /* Header text color */
+    margin: 0; /* Remove default margin */
+    align-self: stretch; /* Make h2 span the entire width */
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.refresh-btn {
+    background: white;
+    border: 1px solid black;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: x-large;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-1, .col-2 {
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.col-1 {
+    flex: 1;
+    max-width: 20%;
+    margin-top: 0.6%;
+}
+
+.col-2 {
+    flex: 2;
+    max-width: 40%;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 50%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.add-customer-input {
+    display: flex;
+    align-items: center;
+}
+
+.add-customer-input input {
+    width: 42%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0px 0px 5px;
+    margin-right: -1px;
+}
+
+.add-customer-input button {
+    padding: 8px 12px;
+    border: 1px solid #C42E1D;
+    border-left: none;
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+    background-color: #C42E1D;
+    color: #fff;
+}
+
+.add-customer-input button i {
+    margin-right: 5px;
+}
+
+.add-btnItem {
+    background-color: #fff;
+    border: 2px solid #C42E1D;
+    padding: 8px 12px;
+    color: #C42E1D;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin: 15px 15px 15px auto;
+}
+
+.add-btnItem i {
+    margin-right: 5px;
+}
+
+.add-btnItem:hover {
+    background-color: #C42E1D;
+    color: #fff;
+}
+
+.table {
+    width: 98%;
+    margin: auto;
+    color: #212529;
+    border-collapse: collapse;
+    border-radius: 10px;
+}
+
+.table thead {
+    background-color: #C42E1D;
+    color: #fff;
+}
+
+.table th, .table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border: 1px solid #dee2e6;
+}
+
+.action-buttons {
+    text-align: center;
+}
+
+.btn-view {
+    padding: 8px 12px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #28a745;
+    color: #000;
+}
+
+.btn-edit {
+    padding: 8px 12px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: transparent;
+    color: #000;
+    border: 1px solid #fbff00;
+    text-decoration: none;
+}
+
+.btn-delete {
+    padding: 8px 12px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: transparent;
+    color: #000;
+    border: 1px solid #dc3545;
+}
+
+.grand-total {
+    font-size: 24px;
+    text-align: right;
+    margin:10px 40% 10px 0px;
+}
+
+.pay-btn {
+    text-align: center;
+    background-color: #C42E1D;
+    border: 2px solid #C42E1D;
+    padding: 10px 12px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    margin: 15px 20px 15px auto;
+}
+
+.pay-btn i {
+    margin-right: 5px;
+}
+
+.pay-btn:hover {
+    background-color: #fff;
+    color: #C42E1D;
+}
+
+.modaltransaksi {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Style for the modal content */
+.modaltransaksi-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-height: 80%;
+    overflow-y: auto;
+}
+
+.modaltransaksi-content1 {
+    background: #fff;
+    padding: 0px 0px 10px 0px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    margin: 10px auto;
+}
+
+/* Style for the h3 element in the modal */
+.modaltransaksi-content1 h3 {
+    background-color: #C42E1D;
+    color: #fff;
+    padding: 10px;
+    margin: 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.modaltransaksi-content1 p {
+    margin-left: 10px;
+}
+
+.add-btnCust {
+    padding: 8px 12px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: transparent;
+    color: #000;
+    border: 1px solid #dc3545;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.modaltransaksi button {
+    background-color: #C42E1D;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.inputModal {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.inputModal input{
+    width: 100%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Styles for the Payment Confirmation Modal */
+#payModal {
+    display: none;
+}
+
+#payModal .modaltransaksi-content2 {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px; /* Adjust the maximum width as needed */
+    margin: auto; /* Center the modal vertically and horizontally */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#payModal h2 {
+    background-color: transparent;
+    color: black;
+    border-radius: 5px 5px 0 0;
+}
+
+#payModal .close:hover,
+#payModal .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#payModal .payment-details {
+    margin-top: 20px;
+}
+
+#payModal .payment-details p {
+    margin-bottom: 10px;
+}
+
+#payModal .grand-total {
+    text-align: right;
+    margin-top: 20px;
+}
+
+#payModal .grand-total strong {
+    font-weight: bold;
+}
+
+#payModal .grand-total span {
+    font-size: 18px;
+}
+
+/* Styles for the Payment Confirmation Modal */
+#PrintPayModal {
+    display: none;
+}
+
+#PrintPayModal .modaltransaksi-content3 {
+    background-color: #fefefe;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px; /* Adjust the maximum width as needed */
+    margin: auto; /* Center the modal vertically and horizontally */
+}
+
+#PrintPayModal h1 {
+    background-color: transparent;
+    color: black;
+    border-radius: 5px 5px 0 0;
+    margin: auto;
+    text-align: center;
+}
+
+#PrintPayModal .close:hover,
+#PrintPayModal .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#PrintPayModal .payment-details {
+    margin-top: 20px;
+}
+
+#PrintPayModal .payment-details p {
+    margin-bottom: 10px;
+}
+
+#PrintPayModal .grand-total-print {
+    font-size: 24px;
+    text-align: right;
+    margin-top: 20px;
+}
+
+#PrintPayModal .grand-total-print strong {
+    font-weight: bold;
+}
+
+#PrintPayModal .grand-total-print span {
+    font-size: 18px;
+}

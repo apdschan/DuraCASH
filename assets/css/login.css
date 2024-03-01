@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Mono&family=Ysabeau+Infant:wght@300&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+#login-form {
+    display: flex;
+    height: 100%;
+}
+
+.left {
+    flex: 1;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.right {
+    flex: 1;
+    padding: 100px;
+    box-sizing: border-box;
+    margin: auto;
+    max-width: 700px;
+    min-height: 100vh;
+    margin-top: 0;
+    background-color: #C42E1D;
+}
+
+.headings {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+.heading {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5%;
+    color: #fff;
+}
+
+.heading2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5%;
+    margin-left: 10px;
+}
+
+.connect {
+    font-size: 13px;
+    margin-bottom: 1px;
+    color: white;
+}
+
+.input-group {
+    display: flex;
+    gap: 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center; /* Center the checkbox vertically with the labels */
+}
+
+.input-group label {
+    margin-bottom: 0;
+}
+
+.input-group input[type="checkbox"] {
+    margin-right: 10px; /* Adjust the spacing between the checkbox and label */
+    transform: scale(1.5); /* Make the checkbox bigger */
+    cursor: pointer;
+}
+
+.input-group div {
+    flex: 1;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 4px);
+    padding: 19px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+	font-weight: bold;
+	font-size: 15px;
+    color: white;
+}
+
+.label-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.label-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.password-input-container {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 20px;
+    top: 40%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.toggle-password i {
+    display: inline-block;
+}
+
+.submit {
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    margin-top: 40px;
+}
+
+button {
+    background-color: #fff;
+    color: #C42E1D;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #d1d1d1;
+}
+
+.register {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register p {
+    font-size: 14px;
+    color: #fff;
+}
+
+.register a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register a:hover {
+    color: #010101;
+}
+
+/* Media query for screens smaller than 640px */
+@media (max-width: 640px) {
+    .left {
+        display: none;
+    }
+
+    .right {
+        order: 1; /* Change the order to 1, placing it before .left in the flex container */
+        padding: 20px;
+        box-sizing: border-box;
+        margin: auto;
+    }
+}
